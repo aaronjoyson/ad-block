@@ -9,7 +9,7 @@ from sklearn.ensemble import RandomForestRegressor
 st.set_page_config(page_title="Ad Block Click Prediction", page_icon="📈")
 
 st.title("Ad Block Click Prediction 📈")
-
+                    
 # Load dataset
 def load_data():
     df = pd.read_csv("advertising.csv")  # Ensure this dataset has appropriate columns
@@ -59,3 +59,4 @@ if st.button("Predict"):
     prediction = model.predict(input_df)
     st.subheader('Prediction')
     st.write(f"Predicted Ad Click Probability: **{prediction[0]:.2f}**")
+ 
